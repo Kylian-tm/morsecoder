@@ -1,2 +1,3 @@
 # morsedecoder
-A program made in Arduino to make text to morse code using a piezo
+A program made with Ardiuno.
+It codes text to morsecode and then transmits that thru a piezo so you can hear the message.
