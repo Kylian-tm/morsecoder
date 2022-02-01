@@ -5,14 +5,12 @@ namespace morse{
   char space = ' ';
   
   void dot(){
-    //dot
     digitalWrite(piezo, HIGH);
     delay(250);
     digitalWrite(piezo, LOW);
     delay(650);
   }
   void dash(){
-    //dash
     digitalWrite(piezo, HIGH);
     delay(500);
     digitalWrite(piezo, LOW);
@@ -25,11 +23,11 @@ namespace morse{
                         "dot dot dash", "dot dot dot dash", "dot dash dash", "dash dot dot dash", "dash dot dash dash", "dash dash dot dot"};
   
   void decodeMorse(){
-    //letter check
+    // Check what character is being translated to morse
     for(int i=97; i<=122; i++){
       if(incoming==i){
         Serial.println(morse[i-97]);
-        //morsefy
+        // Convert that character to morse
         for(int j=0; j<morse[i-97].length(); j++){
           if(j==2){
             decodeToPtLetter = morse[i-97].substring(1, 2);
